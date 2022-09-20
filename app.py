@@ -27,7 +27,7 @@ line_bot_api = LineBotApi('oeV7aX9aZ0IpUw5q4xJnhgL+SRu/uvPIEg4fsaapkP3AYY3Ox+bCa
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('20370e7061e924b99b0ebd8078f89251')
 
-line_bot_api.push_message('Ua3077104df675bcad56981c346693b69', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('Ua3077104df675bcad56981c346693b69',TextSendMessage(text='你可以開始了'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -51,8 +51,11 @@ def callback():
 ##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
-    line_bot_api.reply_message(event.reply_token,message)
+    message = event.message.text
+    if re.match('告訴我秘密',message):
+        line_bot_api.reply_message(event.reply_token,TextSendMessage('才不告訴你哩！'))
+    else:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 
 #主程式
 import os
