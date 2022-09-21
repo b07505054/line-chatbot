@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-from flask_ngrok import run_with_ngrok
+
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
@@ -40,8 +40,6 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
-#     message1 = TextSendMessage('hi')
-    
     line_bot_api.reply_message(event.reply_token,message)
 
 #主程式
