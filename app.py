@@ -39,8 +39,12 @@ def callback():
 ##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage('hi')
-    line_bot_api.reply_message(event.reply_token,message)
+    message = TextSendMessage(text=event.message.text)
+    message1 = TextSendMessage('hi')    
+    if event.message.text == '你好':
+        line_bot_api.reply_message(event.reply_token,message)
+    else:
+        line_bot_api.reply_message(event.reply_token,message1)
 
 #主程式
 import os
