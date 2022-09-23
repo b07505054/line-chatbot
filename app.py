@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-
+import random
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
@@ -16,7 +16,7 @@ line_bot_api = LineBotApi('oeV7aX9aZ0IpUw5q4xJnhgL+SRu/uvPIEg4fsaapkP3AYY3Ox+bCa
 handler = WebhookHandler('20370e7061e924b99b0ebd8078f89251')
 
 line_bot_api.push_message('Ua3077104df675bcad56981c346693b69', TextSendMessage(text='你可以開始了'))
-temp=0
+
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -39,8 +39,8 @@ def callback():
 ##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-#     if event.message.type == 'text':
-        
+    if event.message.type == 'text':
+        temp=random.randint(0, 1)
         message = TextSendMessage(text=event.message.text)   
         if (event.message.text == '你好' or event.message.text == '您好' ) and temp==0 :
             temp=1
@@ -113,16 +113,16 @@ def handle_message(event):
         
         else:
             line_bot_api.reply_message(event.reply_token,message)
-#     else:
-#         try:
-#             stid=event.message.stickerId '
-#             paid=events.message.packageId
-#             sticker_message = StickerSendMessage(
-#                 package_id=paid,
-#                 sticker_id=stid
-#             )
-#             line_bot_api.reply_message(event.reply_token, sticker_message)
-#         except:
+    else:
+        try:
+            stid=event.message.stickerId '
+            paid=events.message.packageId
+            sticker_message = StickerSendMessage(
+                package_id=paid,
+                sticker_id=stid
+            )
+            line_bot_api.reply_message(event.reply_token, sticker_message)
+        except:
             
 #主程式
 import os
