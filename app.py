@@ -39,7 +39,7 @@ def callback():
 ##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.type == 'message':
+#     if event.message.type == 'message':
         temp=random.randint(0, 1)
         message = TextSendMessage(text=event.message.text)   
         if (event.message.text == '你好' or event.message.text == '您好' ) and temp==0 :
@@ -112,17 +112,25 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, sticker_message)
         
         else:
-            line_bot_api.reply_message(event.reply_token,message)
-    else:
-        try:
-            stid=event.message.stickerId '
-            paid=events.message.packageId
-            sticker_message = StickerSendMessage(
-                package_id=paid,
-                sticker_id=stid
-            )
-            line_bot_api.reply_message(event.reply_token, sticker_message)
-        except:
+            try:
+                stid=event.message.stickerId '
+                paid=events.message.packageId
+                sticker_message = StickerSendMessage(
+                    package_id=paid,
+                    sticker_id=stid
+                )
+                line_bot_api.reply_message(event.reply_token, sticker_message)
+                line_bot_api.reply_message(event.reply_token,message)
+#     else:
+#         try:
+#             stid=event.message.stickerId '
+#             paid=events.message.packageId
+#             sticker_message = StickerSendMessage(
+#                 package_id=paid,
+#                 sticker_id=stid
+#             )
+#             line_bot_api.reply_message(event.reply_token, sticker_message)
+#         except:
             
 #主程式
 import os
