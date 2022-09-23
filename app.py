@@ -95,7 +95,7 @@ def handle_message(event):
                 sticker_id='16581311'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-         elif event.message.text == '難過':
+        elif event.message.text == '難過':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='6362',
