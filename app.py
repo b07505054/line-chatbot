@@ -110,27 +110,41 @@ def handle_message(event):
                 sticker_id='11087933'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
+#         elif event.message.text == '五分里值得更好':
+#             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
+#             sticker_message = StickerSendMessage(
+#                 package_id='6362',
+#                 sticker_id='11087933'
+#             )
+#             line_bot_api.reply_message(event.reply_token, sticker_message)
+#         elif event.message.text == '五分里問題回報':
+#             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
+#             message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
+#             line_bot_api.reply_message(event.reply_token,message1)
+#         elif event.message.text == '五分里的網站':
+#             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
+#             message1 = TextSendMessage('早安，小弟我是五分里候選人林月琴的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，想問怎麼教小孩請洽里長，想學怎麼寫點程式還是請洽里長，不過網站還在趕工哈哈哈') 
+#             line_bot_api.reply_message(event.reply_token,message1)
 #         elif event.message.text == '五分里好棒':
 #             buttons_template_message = TemplateSendMessage(
-#             alt_text='這個看不到',
+#             alt_text='五分里基礎選單',
 #             template=ButtonsTemplate(
 #                 thumbnail_image_url='https://img.onl/dvJsLW',
-#                 title='行銷搬進大程式',
+#                 title='五分里新聯繫方式,
 #                 text='選單功能－TemplateSendMessage',
 #                 actions=[
-#                     PostbackAction(
-#                         label='偷偷傳資料',
-#                         display_text='檯面上',
-#                         data='action=檯面下'
+#                     MessageAction(
+#                         label='五分里值得更好',
+#                         text='嗨，我想提出能進步的方式'
 #                     ),
 #                     MessageAction(
-#                         label='光明正大傳資料',
-#                         text='我就是資料'
+#                         label='五分里問題回報',
+#                         text='這裡有問題'
 #                     ),
-#                     URIAction(
-#                         label='行銷搬進大程式',
-#                         uri='https://marketingliveincode.com/'
-#                     )
+#                     MessageAction(
+#                         label='五分里的網站',
+#                         text='我想看看網站'
+#                     ),
 #                 ]
 #             )
 #         )
