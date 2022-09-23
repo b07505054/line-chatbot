@@ -112,15 +112,8 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, sticker_message)
         
         else:
-            try:
-                stid=event.message.stickerId '
-                paid=events.message.packageId
-                sticker_message = StickerSendMessage(
-                    package_id=paid,
-                    sticker_id=stid
-                )
-                line_bot_api.reply_message(event.reply_token, sticker_message)
-                line_bot_api.reply_message(event.reply_token,message)
+           
+            line_bot_api.reply_message(event.reply_token,message)
 #     else:
 #         try:
 #             stid=event.message.stickerId '
