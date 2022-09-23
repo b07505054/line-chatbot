@@ -39,7 +39,7 @@ def callback():
 ##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.type == 'text':
+    if event.message.type == 'message':
         temp=random.randint(0, 1)
         message = TextSendMessage(text=event.message.text)   
         if (event.message.text == '你好' or event.message.text == '您好' ) and temp==0 :
