@@ -43,9 +43,10 @@ def handle_message(event):
         temp=0
         message = TextSendMessage(text=event.message.text)   
         if (event.message.text == '你好' or event.message.text == '您好' ) and temp==0 :
-            message1 = TextSendMessage('您好，祝您有個美好的一天喔') 
-            line_bot_api.reply_message(event.reply_token,message)
             temp=1
+            message1 = TextSendMessage('您好，祝您有個美好的一天喔') 
+            line_bot_api.reply_message(event.reply_token,message1)
+            
         elif (event.message.text == '你好' or event.message.text == '您好') and temp==1 :
             temp=0
             sticker_message = StickerSendMessage(
