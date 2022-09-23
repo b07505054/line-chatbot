@@ -42,18 +42,18 @@ def handle_message(event):
 #     if event.message.type == 'text':
         temp=0
         message = TextSendMessage(text=event.message.text)   
-        if (event.message.text == '你好' ) and temp==0 :
-            message1 = TextSendMessage('您好，祝您有個美好的一天喔') 
-            line_bot_api.reply_message(event.reply_token,message)
-            temp=1
-        elif (event.message.text == '你好' ) and temp==1 :
-            temp=0
-            sticker_message = StickerSendMessage(
-                package_id='8525',
-                sticker_id='16581296'
-            )
-            line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '晚安':
+#         if (event.message.text == '你好' ) and temp==0 :
+#             message1 = TextSendMessage('您好，祝您有個美好的一天喔') 
+#             line_bot_api.reply_message(event.reply_token,message)
+#             temp=1
+#         elif (event.message.text == '你好' ) and temp==1 :
+#             temp=0
+#             sticker_message = StickerSendMessage(
+#                 package_id='8525',
+#                 sticker_id='16581296'
+#             )
+#             line_bot_api.reply_message(event.reply_token, sticker_message)
+        if event.message.text == '晚安':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='789',
