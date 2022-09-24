@@ -132,7 +132,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
                 title='五分里新聯繫方式',
-                text='選單功能－TemplateSendMessage',
+                text='選單功能-每天都要開心喔',
                 actions=[
                     URIAction(
                         label='五分里來進步',
@@ -145,6 +145,43 @@ def handle_message(event):
                     MessageAction(
                         label='五分里的網站',
                         text='我想看看網站'
+                    ),
+                ]
+            )
+        )
+            line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        elif event.message.text == '我想來泡茶吃點心找阿姨聊天':'
+            location_message = LocationSendMessage(
+                title='競選總部',
+                address='東湖路160巷10弄33號1樓',
+                latitude=25.067462903395572, 
+                longitude=121.61635255525054
+            )
+            line_bot_api.reply_message(event.reply_token, location_message)
+        elif event.message.text == '我有事想跟阿姨說':'
+            location_message = LocationSendMessage(
+                title='競選總部',
+                address='東湖路160巷10弄33號1樓',
+                latitude=25.067462903395572, 
+                longitude=121.61635255525054
+            )
+            line_bot_api.reply_message(event.reply_token, location_message)
+        elif event.message.text == '月琴阿姨加油':
+            buttons_template_message = TemplateSendMessage(
+            alt_text='月琴阿姨會加油',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                title='月琴阿姨會加油',
+                text='選單功能－祝大家平安喜樂',
+                actions=[
+                    
+                    MessageAction(
+                        label='競選總部',
+                        text='我想來泡茶吃點心找阿姨聊天'
+                    ),
+                    MessageAction(
+                        label='月琴阿姨的line',
+                        text='我有事想跟阿姨說'
                     ),
                 ]
             )
