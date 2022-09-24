@@ -134,9 +134,9 @@ def handle_message(event):
                 title='五分里新聯繫方式',
                 text='選單功能－TemplateSendMessage',
                 actions=[
-                    MessageAction(
+                    URIAction(
                         label='五分里來進步',
-                        text='嗨，我想提出能進步的方式'
+                        uri='https://docs.google.com/forms/u/0/'
                     ),
                     MessageAction(
                         label='五分里問題回報',
