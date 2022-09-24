@@ -123,7 +123,7 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,message1)
         elif event.message.text == '五分里的網站':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
-            message1 = TextSendMessage('早安，小弟我是五分里候選人林月琴的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，想問怎麼教小孩請洽里長，想學怎麼寫點程式還是請洽里長，不過網站還在趕工哈哈哈') 
+            message1 = TextSendMessage('早安，不過網站還在趕工哈哈哈') 
             line_bot_api.reply_message(event.reply_token,message1)
        
         elif event.message.text == '五分里值得更好':
