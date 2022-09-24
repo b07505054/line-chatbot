@@ -149,12 +149,12 @@ def handle_message(event):
 #             )
 #         )
 #         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        else :
+        elif event.message.text == '五分里值得更好':
             buttons_template_message = TemplateSendMessage(
-            alt_text='這個看不到',
+            alt_text='五分里基礎選單',
             template=ButtonsTemplate(
                 thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
-                title='行銷搬進大程式',
+                title='五分里新聯繫方式,
                 text='選單功能－TemplateSendMessage',
                 actions=[
                     MessageAction(
@@ -173,9 +173,9 @@ def handle_message(event):
             )
         )
             line_bot_api.reply_message(event.reply_token, buttons_template_message)
-#         else:
+        else:
            
-#             line_bot_api.reply_message(event.reply_token,message)
+            line_bot_api.reply_message(event.reply_token,message)
 #     else:
 #         try:
 #             stid=event.message.stickerId '
