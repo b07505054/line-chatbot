@@ -154,7 +154,7 @@ def handle_message(event):
             alt_text='五分里基礎選單',
             template=ButtonsTemplate(
                 thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
-                title='五分里新聯繫方式,
+                title='五分里新聯繫方式',
                 text='選單功能－TemplateSendMessage',
                 actions=[
                     MessageAction(
