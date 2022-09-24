@@ -110,18 +110,18 @@ def handle_message(event):
                 sticker_id='11087933'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '五分里來進步':
+        elif event.message.text == '嗨，我想提出能進步的方式':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='6362',
                 sticker_id='11087933'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '五分里問題回報':
+        elif event.message.text == '這裡有問題':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
             line_bot_api.reply_message(event.reply_token,message1)
-        elif event.message.text == '五分里的網站':
+        elif event.message.text == '我想看看網站':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('早安，小弟我是月琴阿姨的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，在此懇請各位使用者一票，不過網站還在趕工哈哈哈') 
             line_bot_api.reply_message(event.reply_token,message1)
