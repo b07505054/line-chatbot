@@ -157,19 +157,18 @@ def handle_message(event):
                 title='行銷搬進大程式',
                 text='選單功能－TemplateSendMessage',
                 actions=[
-                    PostbackAction(
-                        label='偷偷傳資料',
-                        display_text='檯面上',
-                        data='action=檯面下'
+                    MessageAction(
+                        label='五分里值得更好',
+                        text='嗨，我想提出能進步的方式'
                     ),
                     MessageAction(
-                        label='光明正大傳資料',
-                        text='我就是資料'
+                        label='五分里問題回報',
+                        text='這裡有問題'
                     ),
-                    URIAction(
-                        label='行銷搬進大程式',
-                        uri='https://marketingliveincode.com/'
-                    )
+                    MessageAction(
+                        label='五分里的網站',
+                        text='我想看看網站'
+                    ),
                 ]
             )
         )
