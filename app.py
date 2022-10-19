@@ -146,7 +146,7 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, location_message)
         
         elif event.message.text == '我有事想跟阿姨說':
-            message1 = TextSendMessage('lineid是:greattoseeyou000，歡迎你加入喔') 
+            message1 = TextSendMessage('lineid是:greattoseeyou000，直接複製貼上就行了喔，歡迎你加入喔') 
             line_bot_api.reply_message(event.reply_token,message1)
         elif event.message.text == '月琴阿姨加油':
             buttons_template_message = TemplateSendMessage(
