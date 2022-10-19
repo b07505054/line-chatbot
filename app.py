@@ -117,9 +117,11 @@ def handle_message(event):
 #                 sticker_id='11087933'
 #             )
 #             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '這裡有問題':
+        elif event.message.text == '市場共榮~~':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
-            message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
+            message1 = TextSendMessage('嗨，很感謝您對市場共榮這塊感興趣，我將提出以下方式\n'+
+                                       ' 1.不管是攤販或居民都需要生活，故將定期線上舉辦居民與市場攤販共同討論的會議，在維持一定秩序的情況下溝通意見\n'+
+                                       ' 2.承上，將推出優良店家名單，列出積極配合參與會議及值得嘉獎之攤販來獎勵並作為居民選擇比較之一指標\n') 
             line_bot_api.reply_message(event.reply_token,message1)
         elif event.message.text == '政見是什麼!!':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
