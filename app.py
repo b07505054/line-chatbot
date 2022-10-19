@@ -121,7 +121,7 @@ def handle_message(event):
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
             line_bot_api.reply_message(event.reply_token,message1)
-        elif event.message.text == '政見是什麼':
+        elif event.message.text == '政見是什麼!!':
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('五分里來蛻變，我將做到:\n'+
                                        '    1. 建立line群，讓大家可以即時反映遇到的各種問題，或許您的左鄰右舍也有遇到相同的問題或他能幫助到你呢?\n'+
@@ -133,30 +133,7 @@ def handle_message(event):
                                        '    7. 配合市政府及各上層機關市政推動，積極爭取更多更多福利。\n') 
             line_bot_api.reply_message(event.reply_token,message1)
        
-        elif event.message.text == '五分里值得更好':
-            buttons_template_message = TemplateSendMessage(
-            alt_text='五分里基礎選單',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
-                title='五分里新聯繫方式',
-                text='選單功能-每天都要開心喔',
-                actions=[
-                    URIAction(
-                        label='五分里來進步',
-                        uri='https://docs.google.com/forms/u/0/'
-                    ),
-                    MessageAction(
-                        label='五分里問題回報',
-                        text='這裡有問題'
-                    ),
-                    MessageAction(
-                        label='五分里的網站',
-                        text='我想看看網站'
-                    ),
-                ]
-            )
-        )
-            line_bot_api.reply_message(event.reply_token, buttons_template_message)
+       
         elif event.message.text == '我想來泡茶吃點心找阿姨聊天':
             location_message = LocationSendMessage(
                 title='競選總部',
@@ -165,6 +142,7 @@ def handle_message(event):
                 longitude=121.61635255525054
             )
             line_bot_api.reply_message(event.reply_token, location_message)
+        
         elif event.message.text == '我有事想跟阿姨說':
             message1 = TextSendMessage('lineid是:greattoseeyou000，歡迎你加入喔') 
             line_bot_api.reply_message(event.reply_token,message1)
