@@ -40,70 +40,70 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 #     if event.message.type == 'message':
-        temp=random.randint(0, 1)
+        temp=random.randint(0, 9)
         message = TextSendMessage(text=event.message.text)   
-        if (event.message.text == '你好' or event.message.text == '您好' ) and temp==0 :
+        if (event.message.text == '嗨' ) and temp==0 :
             temp=1
             message1 = TextSendMessage('您好，祝您有個美好的一天喔') 
             line_bot_api.reply_message(event.reply_token,message1)
             
-        elif (event.message.text == '你好' or event.message.text == '您好') and temp==1 :
+        elif (event.message.text == '嗨' ) and temp==1 :
             temp=0
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581296'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '晚安':
+        elif (event.message.text == '嗨' ) and temp==2:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='789',
                 sticker_id='10862'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '午安':
+        elif (event.message.text == '嗨' ) and temp==3:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581300'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '早安':
+        elif (event.message.text == '嗨' ) and temp==4:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581308'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '掰掰' or event.message.text == '拜拜' :
+        elif (event.message.text == '嗨' ) and temp==5 :
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581301'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '加油':
+        elif (event.message.text == '嗨' ) and temp==6:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581292'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '生氣':
+        elif (event.message.text == '嗨' ) and temp==7:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='8525',
                 sticker_id='16581311'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '難過':
+        elif (event.message.text == '嗨' ) and temp==8:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='6362',
                 sticker_id='11087930'
             )
             line_bot_api.reply_message(event.reply_token, sticker_message)
-        elif event.message.text == '好累':
+        elif (event.message.text == '嗨' ) and temp==9:
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             sticker_message = StickerSendMessage(
                 package_id='6362',
@@ -121,10 +121,10 @@ def handle_message(event):
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
             line_bot_api.reply_message(event.reply_token,message1)
-        elif event.message.text == '我想看看網站':
-            # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
-            message1 = TextSendMessage('早安，小弟我是月琴阿姨的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，在此懇請各位使用者一票，不過網站還在趕工哈哈哈') 
-            line_bot_api.reply_message(event.reply_token,message1)
+#         elif event.message.text == '我想看看網站':
+#             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
+#             message1 = TextSendMessage('早安，小弟我是月琴阿姨的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，在此懇請各位使用者一票，不過網站還在趕工哈哈哈') 
+#             line_bot_api.reply_message(event.reply_token,message1)
        
         elif event.message.text == '五分里值得更好':
             buttons_template_message = TemplateSendMessage(
