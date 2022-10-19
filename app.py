@@ -121,10 +121,16 @@ def handle_message(event):
             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
             message1 = TextSendMessage('等選上里長表單才能開放，將隨時提供問題回報') 
             line_bot_api.reply_message(event.reply_token,message1)
-#         elif event.message.text == '我想看看網站':
-#             # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
-#             message1 = TextSendMessage('早安，小弟我是月琴阿姨的兒子，南湖國小體育班、明湖國中校排一、建中、台大工程科學與海洋工程，在此懇請各位使用者一票，不過網站還在趕工哈哈哈') 
-#             line_bot_api.reply_message(event.reply_token,message1)
+        elif event.message.text == '政見是什麼':
+            # 貼圖查詢：https://developers.line.biz/en/docs/messaging-api/sticker-list/#specify-sticker-in-message-object
+            message1 = TextSendMessage('1.	建立line群，讓大家可以即時反映遇到的各種問題，或許您的左鄰右舍也有遇到相同的問題或他能幫助到你呢?'+
+                                       '2.承上，在line群中一起投票做下照顧到最多人的決定，任何重大決定，我都將不會簡單寫下無意見，或獨裁決斷。'+
+                                       '3.於南湖國小前的小石鍋到711前方爭取增設人行道維護學生上學安全。'+
+                                       '4.	組織活動，公園好空曠。假日下午或晚餐時間我們一起跳健身操一起順便撿垃圾，一起認識朋友一起聊天。'+
+                                       '5.	建立市場攤販與里民的聯繫管道，一起討論是否能有共善共榮的解方。'+
+                                       '6.	協助五分里最熱心的里民組織各種志工活動，讓五分里更舒適。'+
+                                       '7.	配合市政府及各上層機關市政推動，積極爭取更多更多福利。') 
+            line_bot_api.reply_message(event.reply_token,message1)
        
         elif event.message.text == '五分里值得更好':
             buttons_template_message = TemplateSendMessage(
