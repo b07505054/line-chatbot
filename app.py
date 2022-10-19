@@ -152,7 +152,7 @@ def handle_message(event):
             buttons_template_message = TemplateSendMessage(
             alt_text='月琴阿姨會加油',
             template=ButtonsTemplate(
-                thumbnail_image_url='https://www.google.com/url?sa=i&url=https%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D10936&psig=AOvVaw3BnX52ByjbcfQYl0ZXvnFI&ust=1666256752263000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCMiwn6T46_oCFQAAAAAdAAAAABAD',
+                thumbnail_image_url='https://img.onl/eszFk0',
                 title='月琴阿姨會加油',
                 text='選單功能－祝大家平安喜樂',
                 actions=[
