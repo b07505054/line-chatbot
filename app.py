@@ -161,10 +161,10 @@ def handle_message(event):
                         label='競選總部',
                         text='我想來泡茶吃點心找阿姨聊天'
                     ),
-                    MessageAction(
-                        label='月琴阿姨的line',
-                        text='我有事想跟阿姨說'
-                    ),
+                    URIAction(
+                        label='月琴阿姨的LINE',
+                        uri='https://marketingliveincode.com/'
+                 )
                 ]
             )
         )
