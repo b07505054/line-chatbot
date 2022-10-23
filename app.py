@@ -163,7 +163,7 @@ def handle_message(event):
                     ),
                     URIAction(
                         label='月琴阿姨的LINE',
-                        uri='https://marketingliveincode.com/'
+                        uri='https://line.me/ti/p/uNZuJUcrMo'
                  )
                 ]
             )
